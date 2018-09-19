@@ -92,7 +92,7 @@ namespace extOSC.Editor.Windows
                     {
                         if (inverse && OSCUtilities.CompareAddresses(filter, consoleMessage.Packet.Address))
                             continue;
-                        if (!OSCUtilities.CompareAddresses(filter, consoleMessage.Packet.Address)) continue;
+                        if (!inverse && !OSCUtilities.CompareAddresses(filter, consoleMessage.Packet.Address)) continue;
                     }
 
                     consoleList.Add(consoleMessage);
